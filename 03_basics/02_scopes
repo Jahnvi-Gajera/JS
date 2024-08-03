@@ -1,0 +1,61 @@
+// //var c =300
+
+// let a = 300               //global scope
+
+// // {}                    //scope
+
+// if(true){
+//     let a = 10               //block scope
+//     const b =20
+//     // var c = 30
+//     console.log("INNER:",a)           
+// }
+
+// for(let i = 0;i<array.length;i++){
+//     const element = array[i];
+// }
+
+// console.log(a);
+// // console.log(b);
+// //console.log(c);
+
+
+
+// function one(){
+//     const username = "Jahnvi"
+
+//     function two(){
+//         const website = "Youtube"
+//         console.log(username)
+//     }
+//     //console.log(website)
+
+//     two()
+
+// }
+
+// one()
+
+// if(true){
+//     const username = "Khushi"
+//     if(username === "Khushi"){
+//         const website = "Youtube"
+//         console.log(username + " " + website);
+//     }
+//     //console.log(website);
+// }
+
+//console.log(username);
+
+// ********************Interesting***************************
+
+function addone(num){                 // here we can access before declaration
+    return num + 1
+}
+console.log(addone(5));
+
+
+const addtwo = function(num){   //mini hoisting  -->if we access function before declaration then it will give an error
+    return num + 2
+}
+console.log(addtwo(5));
