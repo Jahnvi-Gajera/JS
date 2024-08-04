@@ -1,51 +1,51 @@
-// //var c =300
+//var c =300
 
-// let a = 300               //global scope
+let a = 300               //global scope
 
-// // {}                    //scope
+// {}                    //scope
 
-// if(true){
-//     let a = 10               //block scope
-//     const b =20
-//     // var c = 30
-//     console.log("INNER:",a)           
-// }
+if(true){
+    let a = 10               //block scope
+    const b =20
+    // var c = 30
+    console.log("INNER:",a)           
+}
 
-// for(let i = 0;i<array.length;i++){
-//     const element = array[i];
-// }
+for(let i = 0;i<array.length;i++){
+    const element = array[i];
+}
 
-// console.log(a);
-// // console.log(b);
-// //console.log(c);
+console.log(a);
+// console.log(b);
+//console.log(c);
 
 
 
-// function one(){
-//     const username = "Jahnvi"
+function one(){
+    const username = "Jahnvi"
 
-//     function two(){
-//         const website = "Youtube"
-//         console.log(username)
-//     }
-//     //console.log(website)
+    function two(){
+        const website = "Youtube"
+        console.log(username)
+    }
+    //console.log(website)
 
-//     two()
+    two()
 
-// }
+}
 
-// one()
+one()
 
-// if(true){
-//     const username = "Khushi"
-//     if(username === "Khushi"){
-//         const website = "Youtube"
-//         console.log(username + " " + website);
-//     }
-//     //console.log(website);
-// }
+if(true){
+    const username = "Khushi"
+    if(username === "Khushi"){
+        const website = "Youtube"
+        console.log(username + " " + website);
+    }
+    //console.log(website);
+}
 
-//console.log(username);
+console.log(username);
 
 // ********************Interesting***************************
 
