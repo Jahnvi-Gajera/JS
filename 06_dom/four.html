@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(LanName){
+        const li = document.createElement('li')
+        li.innerHTML = `${LanName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addLanguage(LanName){                         //optimized approach
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(LanName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("java")
+
+    //edit element
+    const SecondLang = document.querySelector("li:nth-child(2)")
+    //SecondLang.innerHTML = "Mojo"
+    const newLi = document.createTextNode("li")
+    newLi.textContent = "Mojo"
+    SecondLang.replaceWith(newLi)
+
+    //edit
+
+    const firstLang = document.querySelector("li:first-child(2)")
+    firstLang.outerHTML = '<li>TypeScript<li>'
+
+    //remove
+    const lastLang = document.querySelector("li:last-child(2)")
+    lastLang.remove()
+</script>
+</html>
