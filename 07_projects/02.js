@@ -1,22 +1,26 @@
-const form = document.querySelector('form');
-// this usecase will give you empty
-// const height = parseInt(document.querySelector('#height').value)
+class User {
+    constructor(username){
+        this.username = username
+    }
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
+    logMe(){
+        console.log(`Username: ${this.username}`);
+    }
 
-  const height = parseInt(document.querySelector('#height').value);
-  const weight = parseInt(document.querySelector('#weight').value);
-  const results = document.querySelector('#results');
+    static createId(){
+        return `123`
+    }
+}
 
-  if (height === '' || height < 0 || isNaN(height)) {
-    results.innerHTML = `Please give a valid height ${height}`;
-  } else if (weight === '' || weight < 0 || isNaN(weight)) {
-    results.innerHTML = `Please give a valid weight ${weight}`;
-  } else {
-    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    //show the result
-    results.innerHTML = `<span>${bmi}</span>`;
-  }
-});
+const hitesh = new User("hitesh")
+// console.log(hitesh.createId())
 
+class Teacher extends User {
+    constructor(username, email){
+        super(username)
+        this.email = email
+    }
+}
+
+const iphone = new Teacher("iphone", "i@phone.com")
+console.log(iphone.createId());
